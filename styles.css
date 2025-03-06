@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #7D2AE8;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 400px;
+    max-width: 800px;
+    width: 80dvw;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    margin-bottom: 35px;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+form {
+    width: 100%;
+}
+
+.sideImage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    height: 100%;
+    background-image: url(ulsaImge.JPG);
+    background-size: auto 100%; 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #cab9de00;
+    mix-blend-mode: multiply; 
+}
+
+.input-group {
+    display: flex;
+    margin-bottom: 10px;
+    text-align: left;
+    width: 100%;
+    gap: 5px;
+    padding: 0 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #0000;
+}
+
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #7D2AE8;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #7D2AE8;
+}
+
+.forgot-password {
+    margin-bottom: 30px;
+}
+
+a {
+    color: #7D2AE8;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+
+.registerRow{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 20px;
+}
+.register-text {
+    font-size: 13px;
+}
+.register-link {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.mailImage {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+}
