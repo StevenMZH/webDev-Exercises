@@ -148,9 +148,12 @@ a:hover {
 @media (max-width: 780px) {
     main {
         grid-template-columns: repeat(1, 1fr);
-    }
-
-    main {
         height: 80dvh;
+    }
+}
+
+@media (max-width: 440px) {
+    .sideImage-container h2 {
+        font-size: 20px;
     }
 }
