@@ -38,10 +38,6 @@ body {
     font-family: 'WorkSans1', sans-serif;
 }
 
-main {
-    padding: 20px;
-}
-
 .flex-center {
     display: flex;
     justify-content: center;
@@ -57,11 +53,14 @@ main {
     flex-direction: column;
 }
 
-.bg-img {
+.bg-img, .bg2-img {
     position: absolute;
     width: 100%;
     height: auto;
     z-index: 10;
+}
+.bg2-img {
+    display: none;
 }
 
 main {
@@ -78,9 +77,10 @@ main {
     padding: 30px;
     border-radius: 20px;
     z-index: 100;
+    gap: 15px;
+    margin: 80px 20px;
 }
 
-.QA-section {}
 
 .question-section {
     width: 100%;
@@ -88,11 +88,16 @@ main {
     height: 40px;
 }
 
+.title-container {
+    margin: 10px 0;
+}
+
 h1 {
     font-family: 'WorkSans3', sans-serif;
     font-weight: bolder;
     margin: 0;
-    margin-left: 10px;
+    margin-left: 20px;
+    font-size: 40px;
 }
 
 label {
@@ -130,4 +135,16 @@ p {
 
 .minus-icon {
     display: none;
+}
+
+@media (max-width: 640px) {
+    .bg-img {
+        display: none;
+    }
+    .bg2-img {
+        display: block;
+    }
+    .QA-card {
+        margin-top: 180px;
+    }
 }
