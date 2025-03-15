@@ -1,122 +1,155 @@
-html, body, main {
-    background-color: #7c73c5;
-    color: #000;
-    font-family: "Poppins", sans-serif;
-    margin: 0;
+:root {
+    --bg1-color: #301534;
+    --bg2-color: #F9EEFF;
+    --card: #FFFFFF;
+    --key-color: #B12CEE;
+    --text1: #000;
+    --text2: #878188;
+
+    --card: hsl(0, 0%, 100%);
+    --bg: hsl(275, 100%, 97%);
+    --pk1: hsl(292, 16%, 49%);
+    --pk2: hsl(292, 42%, 14%);
+}
+
+@font-face {
+    font-family: 'WorkSans1';
+    src: url('assets/fonts/WorkSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WorkSans2';
+    src: url('assets/fonts/WorkSans-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WorkSans3';
+    src: url('assets/fonts/WorkSans-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--bg);
+    font-family: 'WorkSans1', sans-serif;
 }
 
 .flex-center {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
+    justify-content: center;
 }
 
-main, .padding1 {
-    padding: 30px;
+.flex-row {
+    display: flex;
+    flex-direction: row;
 }
 
-#challenges-container, #challenge1-container {
+.flex-column {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    width: 100%;
 }
-.challenge-container {
+
+.bg-img, .bg2-img {
+    position: absolute;
+    width: 100%;
     height: auto;
-    border-radius: 10px;
-    background-color: #f0f0ff;
-    color: #555;
-    box-shadow: 0px 0px 5px #25194164;
+    z-index: 10;
 }
-.content, .subtitle .code{
-    align-items: start;
-    text-align: start;
+.bg2-img {
+    display: none;
+}
+
+main {
+    position: absolute;
+    z-index: 100;
     width: 100%;
 }
-.content-section {
+
+.QA-card {
+    background-color: var(--card);
+    max-width: 90dvw;
+    width: 500px;
+    height: auto;
+    padding: 30px;
+    border-radius: 20px;
+    z-index: 100;
+    gap: 15px;
+    margin: 80px 20px;
+}
+
+
+.question-section {
+    width: 100%;
+    align-items: center;
+    height: 40px;
+}
+
+.title-container {
     margin: 10px 0;
-}
-.title {
-    font-size: 18px;
-    font-weight: 700;
-    color: #333;
-}
-.subtitle {
-    font-size: 14px;
-    font-weight: 900;
-    color: #555;
-}
-.content {
-    font-size: 16px;
-    font-weight: 900;
-    color: #000;
-    font-weight: 300;
-}
-.result, pre, input {
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 12px;
-}
-
-code {
-    font-family: "Poppins", sans-serif;
-    font-size: 12px;
-}
-
-.input-container {
-    font-family: "Poppins", sans-serif;
-    flex-direction: row;
-    gap: 10px;
-}
-.input-container .result {
-    width: 100%;
-}
-input {
-    border-radius: 10px;
-    width: 100%;
-    border-color: #0000;
-    background-color: #fff;
-}
-button {
-    height: 35px;
-    border-radius: 10px;
-    border: #0000;
-    background-color: #188ece;
-    color: #fff;
-    padding: 10px;
-    font-weight: 600;
-}
-p, pre {
-    margin: 0;
-}
-p {
-    margin-bottom: 5px;
-}
-.assignment-container {
-    margin-bottom: 15px;
 }
 
 h1 {
-    text-align: center;
-    font-size: 36px;
+    font-family: 'WorkSans3', sans-serif;
+    font-weight: bolder;
+    margin: 0;
+    margin-left: 20px;
+    font-size: 40px;
 }
 
-@media (min-width: 640px) {
-    .padding1 {
-        padding: 40px;
-    }
+hr {
+    border: #f7f7f7 solid 1px;
+    margin: 0;
+}
+
+label {
+    margin: 0;
+    width: 100%;
+    text-align: start;
+    align-items: center;
+    font-weight: bold;
+}
+
+label:hover {
+    color: var(--key-color);
+}
+
+button {
+    background-color: #0000;
+    border: #0000;
+    width: 100%;
+    align-items: center;
+}
+
+p {
+    color: var(--pk1);
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.answer-section {
+    display: none;
+}
+
+.plus-icon {
+    display: block;
+}
+
+.minus-icon {
+    display: none;
 }
 
 @media (max-width: 640px) {
-    h1 {
-        font-size: 24px;
+    .bg-img {
+        display: none;
     }
-    .assignment {
-        font-size: 14px;
+    .bg2-img {
+        display: block;
     }
-    code {
-        font-size: 8px;
+    .QA-card {
+        margin-top: 180px;
     }
 }
