@@ -1,0 +1,133 @@
+:root {
+    --bg1-color: #301534;
+    --bg2-color: #F9EEFF;
+    --card: #FFFFFF;
+    --key-color: #B12CEE;
+    --text1: #000;
+    --text2: #878188;
+
+    --card: hsl(0, 0%, 100%);
+    --bg: hsl(275, 100%, 97%);
+    --pk1: hsl(292, 16%, 49%);
+    --pk2: hsl(292, 42%, 14%);
+}
+
+@font-face {
+    font-family: 'WorkSans1';
+    src: url('assets/fonts/static/WorkSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WorkSans2';
+    src: url('assets/fonts/static/WorkSans-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WorkSans3';
+    src: url('assets/fonts/static/WorkSans-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--bg);
+    font-family: 'WorkSans1', sans-serif;
+}
+
+main {
+    padding: 20px;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.bg-img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 10;
+}
+
+main {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+}
+
+.QA-card {
+    background-color: var(--card);
+    max-width: 90dvw;
+    width: 500px;
+    height: auto;
+    padding: 30px;
+    border-radius: 20px;
+    z-index: 100;
+}
+
+.QA-section {}
+
+.question-section {
+    width: 100%;
+    align-items: center;
+    height: 40px;
+}
+
+h1 {
+    font-family: 'WorkSans3', sans-serif;
+    font-weight: bolder;
+    margin: 0;
+    margin-left: 10px;
+}
+
+label {
+    margin: 0;
+    width: 100%;
+    text-align: start;
+    align-items: center;
+    font-weight: bold;
+}
+
+label:hover {
+    color: var(--key-color);
+}
+
+button {
+    background-color: #0000;
+    border: #0000;
+    width: 100%;
+    align-items: center;
+}
+
+p {
+    color: var(--pk1);
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.answer-section {
+    display: none;
+}
+
+.plus-icon {
+    display: block;
+}
+
+.minus-icon {
+    display: none;
+}
