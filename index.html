@@ -2,94 +2,67 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link href="normalize.css" rel="stylesheet" type="text/css" />
-  <link href="styles.css" rel="stylesheet" type="text/css" />
-  <script src="index.js"></script>
-
-  <title>FAQ Exercise</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./tip-calculator/images/favicon-32x32.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
 </head>
 
 <body>
-  <img class="bg-img" src="assets/images/background-pattern-desktop.svg" alt="bg">
-  <img class="bg2-img" src="assets/images/background-pattern-mobile.svg" alt="bg">
-  <main class="flex-center">
-    <div class="flex-column QA-card">
-      <div class="flex-row title-container">
-        <img src="assets/images/icon-star.svg" alt="star">
-        <h1>FAQs</h1>
-      </div>
-
-      <div class=" QA-section">
-        <div class="flex-row question-section">
-          <button class="flex-row">
-            <label>What is Frontend Mentor, and how will it help me?</label>
-            <img src="assets/images/icon-plus.svg" class="plus-icon" alt="plus">
-            <img src="assets/images/icon-minus.svg" class="minus-icon" alt="plus">
-          </button>
-        </div>
-        <div class="answer-section">
-          <p>Frontend Mentor offers realistic coding challenges to help developers improve their
-            frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
-            all levels and ideal for portfolio building.</p>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class=" QA-section">
-        <div class="flex-row question-section">
-          <button class="flex-row">
-            <label>Is Frontend Mentor free?</label>
-            <img src="assets/images/icon-plus.svg" class="plus-icon" alt="plus">
-            <img src="assets/images/icon-minus.svg" class="minus-icon" alt="plus">
-          </button>
-
-        </div>
-        <div class="answer-section">
-          <p>Yes, Frontend Mentor offers both free and premium coding challenges, with the free
-            option providing access to a range of projects suitable for all skill levels.</p>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class=" QA-section">
-        <div class="flex-row question-section">
-          <button class="flex-row">
-            <label>Can I use Frontend Mentor projects in my portfolio?</label>
-            <img src="assets/images/icon-plus.svg" class="plus-icon" alt="plus">
-            <img src="assets/images/icon-minus.svg" class="minus-icon" alt="plus">
-          </button>
-        </div>
-        <div class="answer-section">
-          <p>Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
-            way to showcase your skills to potential employers!</p>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class=" QA-section">
-        <div class="flex-row question-section">
-          <button class="flex-row">
-            <label>How can I get help if I'm stuck on a Frontend Mentor challenge?</label>
-            <img src="assets/images/icon-plus.svg" class="plus-icon" alt="plus">
-            <img src="assets/images/icon-minus.svg" class="minus-icon" alt="plus">
-          </button>
-        </div>
-        <div class="answer-section">
-          <p>The best place to get help is inside Frontend Mentor's Discord community. There's a help
-            channel where you can ask questions and seek support from other community members.</p>
-        </div>
-      </div>
+    <div class="logo">
+        <img src="tip-calculator/images/logo.svg" alt="" />
     </div>
-  </main>
+    <div class="tip-calculator">
+        <div class="partOne">
+            <label for="">Bill</label>
+            <input type="number" class="input bill-input" id="bill-input" min="1" value="1"/>
+            <label for="" class="tip">Select Tip %</label>
 
+            <div class="tip">
+                <div class="tips tip-5">5%</div>
+                <div class="tips tip-5">10%</div>
+                <div class="tips active-tip tip-5">15%</div>
+                <div class="tips tip-5">25%</div>
+                <div class="tips tip-5">50%</div>
+    
+                <div id="tip-custom"> <input type="number" class="tip-custom" placeholder="CUSTOM" /> </div>
+            </div>
+
+            <div class="peopleLabel">
+                <label for="">Number of People</label>
+                <label for="" class="error">Can't be Zero</label>
+            </div>
+            <input type="number" class="input people-input" min="1" value="1"/>
+        </div>
+
+        <div class="result">
+            <div class="tip-amount">
+                <div class="text">
+                    <p>Tip Amount</p>
+                    <p class="person">/ person</p>
+                </div>
+                <div id="tip-amount" class="amount">$4.27</div>
+            </div>
+    
+            <div class="total">
+                <div class="text">
+                    <p>Total</p>
+                    <p class="person">/ person</p>
+                </div>
+                <div id="total-amount" class="amount">$32.27</div>
+            </div>
+    
+            <div class="reset">RESET</div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <div class="footer">
+        <footer> Coded by Steven.M </footer>
+    </div>
 </body>
 
 </html>

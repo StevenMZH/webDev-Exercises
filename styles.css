@@ -1,155 +1,206 @@
-:root {
-    --bg1-color: #301534;
-    --bg2-color: #F9EEFF;
-    --card: #FFFFFF;
-    --key-color: #B12CEE;
-    --text1: #000;
-    --text2: #878188;
-
-    --card: hsl(0, 0%, 100%);
-    --bg: hsl(275, 100%, 97%);
-    --pk1: hsl(292, 16%, 49%);
-    --pk2: hsl(292, 42%, 14%);
-}
-
-@font-face {
-    font-family: 'WorkSans1';
-    src: url('assets/fonts/WorkSans-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'WorkSans2';
-    src: url('assets/fonts/WorkSans-SemiBold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'WorkSans3';
-    src: url('assets/fonts/WorkSans-Bold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+* {
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    background-color: var(--bg);
-    font-family: 'WorkSans1', sans-serif;
+    height: 100vh;
+    width: 100%;
+    background-color: hsl(185, 41%, 84%);
+    font-family: "Space Mono", monospace;
 }
 
-.flex-center {
-    display: flex;
-    justify-content: center;
+.logo {
+    text-align: center;
+    margin-top: 1.7rem;
+    margin-bottom: 2.3rem;
 }
 
-.flex-row {
-    display: flex;
-    flex-direction: row;
-}
-
-.flex-column {
+.tip-calculator {
+    background-color: white;
     display: flex;
     flex-direction: column;
-}
-
-.bg-img, .bg2-img {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    z-index: 10;
-}
-.bg2-img {
-    display: none;
-}
-
-main {
-    position: absolute;
-    z-index: 100;
-    width: 100%;
-}
-
-.QA-card {
-    background-color: var(--card);
-    max-width: 90dvw;
-    width: 500px;
-    height: auto;
-    padding: 30px;
-    border-radius: 20px;
-    z-index: 100;
-    gap: 15px;
-    margin: 80px 20px;
-}
-
-
-.question-section {
-    width: 100%;
-    align-items: center;
-    height: 40px;
-}
-
-.title-container {
-    margin: 10px 0;
-}
-
-h1 {
-    font-family: 'WorkSans3', sans-serif;
-    font-weight: bolder;
-    margin: 0;
-    margin-left: 20px;
-    font-size: 40px;
-}
-
-hr {
-    border: #f7f7f7 solid 1px;
-    margin: 0;
+    padding: 2rem;
+    border-radius: 1.4rem 1.4rem 0 0;
 }
 
 label {
-    margin: 0;
-    width: 100%;
-    text-align: start;
+    color: hsl(186, 14%, 43%);
+    font-family: 700;
+    margin-bottom: 0.3rem;
+}
+
+input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    padding-right: 18px;
+    background-position: 17px 15px;
+    background-repeat: no-repeat;
+    background-color: hsl(189, 41%, 97%);
+    text-align: right;
+    font-size: 24px;
+    color: hsl(183, 100%, 15%);
+    font-weight: bolder;
+    font-family: "Space Mono", monospace;
+}
+
+.bill-input {
+    background-image: url('images/icon-dollar.svg');
+    margin-bottom: 36px;
+}
+
+.tip {
+    margin-top: 0.7rem;
+    display: grid;
+    grid-template-columns: 144px 144px;
+    row-gap: 2em;
+    column-gap: 18px;
+    margin-bottom: 2rem;
+}
+
+.tips {
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    height: 48px;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    font-weight: bold;
+    font-size: 24px;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-label:hover {
-    color: var(--key-color);
+.active-tip {
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+    font-weight: bolder;
 }
 
-button {
-    background-color: #0000;
-    border: #0000;
-    width: 100%;
+.people-input {
+    background-image: url('images/icon-person.svg');
+    margin-bottom: 2.4rem;
+}
+
+.result {
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    padding: 39px 21px;
+    border-radius: 12px;
+}
+
+.tip-amount, .total {
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.7rem;
 }
 
-p {
-    color: var(--pk1);
-    font-size: 16px;
-    font-weight: normal;
+.person {
+    font-size: 12px;
+    color:hsl(184, 14%, 56%);
+    font-weight: 700;
 }
 
-.answer-section {
+.amount {
+    font-size: 28px;
+    color: hsl(172, 67%, 45%);
+    font-weight: 700;
+}
+
+.reset {
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+    padding: 9px 0 9px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+}
+
+#tip-custom input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 48px;
+}
+
+.peopleLabel {
+    display: flex;
+    justify-content: space-between;
+}
+
+.error {
+    color: red;
     display: none;
 }
 
-.plus-icon {
-    display: block;
+footer {
+    text-align: center;
+    padding: 10px;
+    font-weight: 600;
 }
 
-.minus-icon {
-    display: none;
-}
+@media only screen and (min-width: 1000px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-@media (max-width: 640px) {
-    .bg-img {
-        display: none;
+    input {
+        width: 415px;
+        padding: 9px;
+        background-position: 17px 18px;
     }
-    .bg2-img {
-        display: block;
+
+    .tip-calculator {
+        width: 990px;
+        flex-direction: row;
+        border-radius: 1.4rem;
+        padding: 2.3rem;
+        height: 479px;
     }
-    .QA-card {
-        margin-top: 180px;
+
+    .partOne {
+        margin-top: 1rem;
+        margin-left: 1.2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bill-input {
+        margin-bottom: 3.4rem;
+    }
+
+    .tip {
+        grid-template-columns: 135px 135px 135px;
+        row-gap: 1.2em;
+        column-gap: 17px;
+        margin-bottom: 3.2rem;
+    }
+
+    .tips {
+        height: 55px;
+    }
+
+    .result {
+        margin-left: auto;
+        width: 400px;
+        display: flex;
+        flex-direction : column;
+        align-content: space-between;
+        padding: 48px 38px;   
+    }
+
+    .amount {
+        font-size: 55px;
+    }
+
+    .reset {
+        padding: 13px 0 13px 0;
+        margin-top: auto;
     }
 }
